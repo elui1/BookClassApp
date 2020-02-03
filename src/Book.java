@@ -9,10 +9,12 @@ public class Book {
 
     }
 
-    public Book(String title, String author, String description) {
+    public Book(String title, String author, String description, boolean isInStock) {
         this.title = title;
         this.author = author;
         this.description = description;
+        this.isInStock = isInStock;
+
     }
 
     public String getTitle() {
