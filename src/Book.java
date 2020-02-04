@@ -1,4 +1,5 @@
 public class Book {
+    private String SKU;
     private String title;
     private String author;
     private String description;
@@ -9,20 +10,27 @@ public class Book {
 
     }
 
-    public Book(String title, String author, String description, boolean isInStock) {
-        this.title = title;
-        this.author = author;
-        this.description = description;
-        this.isInStock = isInStock;
+    public Book(String SKU) {
+        this.SKU=SKU;
 
     }
 
-    public Book(String title, String author, String description, double price) {
+    public Book(String SKU, String title, String author, String description, double price,
+                boolean isInStock) {
+        this.SKU = SKU;
         this.title = title;
         this.author = author;
         this.description = description;
         this.price = price;
+        this.isInStock = isInStock;
+    }
 
+    public String getSKU() {
+        return SKU;
+    }
+
+    public void setSKU(String SKU) {
+        this.SKU = SKU;
     }
 
     public String getTitle() {
@@ -66,8 +74,8 @@ public class Book {
     }
 
     public void getDisplayText() {
-        System.out.println("The author is " + author);
-        System.out.println("The title is " + title);
-        System.out.println("The description is " + description);
+        System.out.println("The author is: " + author);
+        System.out.println("The title is: " + title);
+        System.out.println("The description is: " + description);
     }
 }
